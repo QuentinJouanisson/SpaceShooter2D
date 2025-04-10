@@ -1,0 +1,1141 @@
+fileFormatVersion: 2
+guid: ae506e93b12d14340ac7f43940f9a7e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7286426187138459450
+    second: spaceshooterspritesheet_AIBGremoved_0
+  - first:
+      213: 3661820488007971206
+    second: spaceshooterspritesheet_AIBGremoved_1
+  - first:
+      213: -1782236750705330027
+    second: spaceshooterspritesheet_AIBGremoved_2
+  - first:
+      213: -870599531524384903
+    second: spaceshooterspritesheet_AIBGremoved_3
+  - first:
+      213: 8471502747120307830
+    second: spaceshooterspritesheet_AIBGremoved_4
+  - first:
+      213: 912985130372091201
+    second: spaceshooterspritesheet_AIBGremoved_5
+  - first:
+      213: 584592724217578500
+    second: spaceshooterspritesheet_AIBGremoved_6
+  - first:
+      213: 4642981436478561240
+    second: spaceshooterspritesheet_AIBGremoved_7
+  - first:
+      213: -8879347283983560128
+    second: spaceshooterspritesheet_AIBGremoved_8
+  - first:
+      213: -1697154531746965148
+    second: spaceshooterspritesheet_AIBGremoved_9
+  - first:
+      213: -3465039492481170813
+    second: spaceshooterspritesheet_AIBGremoved_10
+  - first:
+      213: 805131041367748368
+    second: spaceshooterspritesheet_AIBGremoved_11
+  - first:
+      213: -1275567316635464040
+    second: spaceshooterspritesheet_AIBGremoved_12
+  - first:
+      213: -4175915492093617845
+    second: spaceshooterspritesheet_AIBGremoved_13
+  - first:
+      213: -3492667890087748775
+    second: spaceshooterspritesheet_AIBGremoved_14
+  - first:
+      213: 5623307974404565818
+    second: spaceshooterspritesheet_AIBGremoved_15
+  - first:
+      213: 2384894083775315276
+    second: spaceshooterspritesheet_AIBGremoved_16
+  - first:
+      213: 5514949118499478475
+    second: spaceshooterspritesheet_AIBGremoved_17
+  - first:
+      213: -6504420899097770879
+    second: spaceshooterspritesheet_AIBGremoved_18
+  - first:
+      213: -506931976794977992
+    second: spaceshooterspritesheet_AIBGremoved_19
+  - first:
+      213: 6783105449246980093
+    second: spaceshooterspritesheet_AIBGremoved_20
+  - first:
+      213: 2403026562212550791
+    second: spaceshooterspritesheet_AIBGremoved_21
+  - first:
+      213: -2149600015500695197
+    second: spaceshooterspritesheet_AIBGremoved_22
+  - first:
+      213: -1676276610501966252
+    second: spaceshooterspritesheet_AIBGremoved_23
+  - first:
+      213: -1993236439817400549
+    second: spaceshooterspritesheet_AIBGremoved_24
+  - first:
+      213: -7078118639370741957
+    second: spaceshooterspritesheet_AIBGremoved_25
+  - first:
+      213: 4037856831894749687
+    second: spaceshooterspritesheet_AIBGremoved_26
+  - first:
+      213: -5472033075357345215
+    second: spaceshooterspritesheet_AIBGremoved_27
+  - first:
+      213: 6356245997840697082
+    second: spaceshooterspritesheet_AIBGremoved_28
+  - first:
+      213: -5973474591793575705
+    second: spaceshooterspritesheet_AIBGremoved_29
+  - first:
+      213: 800179023071815226
+    second: spaceshooterspritesheet_AIBGremoved_30
+  - first:
+      213: 8904448344933356392
+    second: spaceshooterspritesheet_AIBGremoved_31
+  - first:
+      213: -6979365478210011749
+    second: spaceshooterspritesheet_AIBGremoved_32
+  - first:
+      213: -6411381364915390364
+    second: spaceshooterspritesheet_AIBGremoved_33
+  - first:
+      213: 6785039746965074105
+    second: spaceshooterspritesheet_AIBGremoved_34
+  - first:
+      213: -250570179605204685
+    second: spaceshooterspritesheet_AIBGremoved_35
+  - first:
+      213: 6406496851197954778
+    second: spaceshooterspritesheet_AIBGremoved_36
+  - first:
+      213: 7058364909090961002
+    second: spaceshooterspritesheet_AIBGremoved_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 362
+        width: 70
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c728ff1f36292e44098d29d4aebf1637
+      internalID: -721043011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 362
+        width: 122
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44589e3d89a35244298e858ab8eeb9db
+      internalID: 1662620957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_2
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 370
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f669abc451b5c4381c3ff7267a9a26
+      internalID: -685449365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_3
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 370
+        width: 121
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e922f52dcfd8c684ab9bc825ae87faaa
+      internalID: 1207285890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_4
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 371
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a1b0438d062a24c8e6560115ceffe4
+      internalID: 10170432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_5
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 302
+        width: 121
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea4f35c41ab4a345a7ee4852e8e994c
+      internalID: 1663587465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 309
+        width: 50
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43da75c7ea14d94c9295c68438c3293
+      internalID: -1817991373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 309
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa82006e78fd6b4fb884a10aec79a20
+      internalID: 1836344184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 309
+        width: 59
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27e512cfaecba34e83a50cabb7a6a85
+      internalID: -666242880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_9
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 315
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28bd71d44b34254fa583913799b8194
+      internalID: -338513965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_10
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 315
+        width: 50
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c2d4881d03b3446bd401aa5f94b148
+      internalID: -1970936078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_11
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 315
+        width: 55
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c59b721521f4294a868d75a2c224bfe
+      internalID: 205400041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_12
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 312
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58f3ce4fca460f43a30f0d68507408e
+      internalID: 1238287323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_13
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 319
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d67185035e82649925ece968562be0
+      internalID: -394813468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_14
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 198
+        width: 76
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21cb54aa57c68745bade628cdf415eb
+      internalID: -776883322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_15
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 228
+        width: 113
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b4dd63598f3a54dbd646cfe3441532
+      internalID: 1556674883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_16
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 258
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460211f15375ebd4ebd0f52bbd012dc1
+      internalID: -1863774932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_17
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 258
+        width: 107
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f3417b1d255024bbe1ae2b13e85b8e
+      internalID: -1796021119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_18
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 263
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cf2cd62c0ff764dbace3f0fbbb7c89
+      internalID: -463450609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_19
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 263
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa6a53f532bd1943b3325f45c30e0bf
+      internalID: -795418491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_20
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 172
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d056901ce014e46a83c1fabbc01ab6
+      internalID: -1029522277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_21
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 198
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae338efe52e1bc44a680e95ebe5a8b4
+      internalID: 2124568767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_22
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 191
+        width: 9
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c85948f5bf73f468497f8abf685c06
+      internalID: -1016848849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_23
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 184
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc6a5ff156481d4f8bfe88bdaa1d8eb
+      internalID: -654317293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_24
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 192
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dc672bdafe611428db2c4489bfec5b
+      internalID: -1650500713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_25
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 175
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675b26df1e4e3cf44882ca0a9765a16e
+      internalID: -1379234990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_26
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 107
+        width: 131
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0e955aee42fb140895250d5ad662e1
+      internalID: 1945206489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_27
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 102
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13dd7385b29d08441b187d7295d877f4
+      internalID: 171466874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_28
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 102
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab543c25deebc9940b46e5800ab387cb
+      internalID: 1966834919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_30
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 105
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c444b0b7cb8fc49a64aff73ecd1b3d
+      internalID: -1998688189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_31
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 107
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0096ed62b66ec72429a570b6a094672f
+      internalID: -429971757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_32
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 101
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a47a1c4e3c43e94095c6bba86b0d76d
+      internalID: -1754658929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_33
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 26
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107a1d8fec558b547a344b89541a835c
+      internalID: 673953541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_34
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 26
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf5e6758fc6d4b4d813a1fdf46676e2
+      internalID: -1910347624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_35
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 26
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2654f55aa685f45b0c22ba3c5ca6f4
+      internalID: -1472501303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_36
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 11
+        width: 80
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415a7fa3ab571a6418e49d90c9d669e4
+      internalID: -456413977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_37
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 25
+        width: 45
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e8e98de874c0249be3e9c94e1e231b
+      internalID: -140962091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_38
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 17
+        width: 52
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c73ed35429cc5b4b9ca4438b06bdbfa
+      internalID: 1601237123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_29
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 102
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5613838caaa864c469f336fc917b6282
+      internalID: -1121579172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c1168553164131b40a2f4c2f5b8cde7a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spaceshooterspritesheet_AIBGremoved_0: -721043011
+      spaceshooterspritesheet_AIBGremoved_1: 1662620957
+      spaceshooterspritesheet_AIBGremoved_10: -1970936078
+      spaceshooterspritesheet_AIBGremoved_11: 205400041
+      spaceshooterspritesheet_AIBGremoved_12: 1238287323
+      spaceshooterspritesheet_AIBGremoved_13: -394813468
+      spaceshooterspritesheet_AIBGremoved_14: -776883322
+      spaceshooterspritesheet_AIBGremoved_15: 1556674883
+      spaceshooterspritesheet_AIBGremoved_16: -1863774932
+      spaceshooterspritesheet_AIBGremoved_17: -1796021119
+      spaceshooterspritesheet_AIBGremoved_18: -463450609
+      spaceshooterspritesheet_AIBGremoved_19: -795418491
+      spaceshooterspritesheet_AIBGremoved_2: -685449365
+      spaceshooterspritesheet_AIBGremoved_20: -1029522277
+      spaceshooterspritesheet_AIBGremoved_21: 2124568767
+      spaceshooterspritesheet_AIBGremoved_22: -1016848849
+      spaceshooterspritesheet_AIBGremoved_23: -654317293
+      spaceshooterspritesheet_AIBGremoved_24: -1650500713
+      spaceshooterspritesheet_AIBGremoved_25: -1379234990
+      spaceshooterspritesheet_AIBGremoved_26: 1945206489
+      spaceshooterspritesheet_AIBGremoved_27: 171466874
+      spaceshooterspritesheet_AIBGremoved_28: 1966834919
+      spaceshooterspritesheet_AIBGremoved_29: -1121579172
+      spaceshooterspritesheet_AIBGremoved_3: 1207285890
+      spaceshooterspritesheet_AIBGremoved_30: -1998688189
+      spaceshooterspritesheet_AIBGremoved_31: -429971757
+      spaceshooterspritesheet_AIBGremoved_32: -1754658929
+      spaceshooterspritesheet_AIBGremoved_33: 673953541
+      spaceshooterspritesheet_AIBGremoved_34: -1910347624
+      spaceshooterspritesheet_AIBGremoved_35: -1472501303
+      spaceshooterspritesheet_AIBGremoved_36: -456413977
+      spaceshooterspritesheet_AIBGremoved_37: -140962091
+      spaceshooterspritesheet_AIBGremoved_38: 1601237123
+      spaceshooterspritesheet_AIBGremoved_4: 10170432
+      spaceshooterspritesheet_AIBGremoved_5: 1663587465
+      spaceshooterspritesheet_AIBGremoved_6: -1817991373
+      spaceshooterspritesheet_AIBGremoved_7: 1836344184
+      spaceshooterspritesheet_AIBGremoved_8: -666242880
+      spaceshooterspritesheet_AIBGremoved_9: -338513965
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

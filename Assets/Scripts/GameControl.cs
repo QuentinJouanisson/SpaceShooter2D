@@ -20,6 +20,7 @@ public class GameControl : MonoBehaviour
 
     private bool isGameOn;
 
+    //coment
     public static GameControl instance ;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

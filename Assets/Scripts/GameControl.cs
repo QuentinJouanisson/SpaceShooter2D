@@ -22,16 +22,21 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private Vector3 wallStartPos;
 
+#pragma warning disable 0414
     [SerializeField]
     private bool isGameOn;
+#pragma warning restore 0414
 
     public static GameControl instance;
 
     [SerializeField]
     private EnnemyRowGenerator rowGenerator;
 
-    
-    
+    public PlayerHealthSystem playerHealth;
+
+    public PlayerHealthSystem mothershipHealth;
+
+
     void Start()
     {
         isGameOn = true;
@@ -41,6 +46,8 @@ public class GameControl : MonoBehaviour
         wallStartPos = Wall.gameObject.transform.position;
         Wall.runWall();
         rowGenerator.toggleGenerator();
+        playerHealth.onDeath += OnGameOver;
+        mothershipHealth.onDeath += OnGameOver;
     }
 
     public static void incrScore(int score)
@@ -59,6 +66,8 @@ public class GameControl : MonoBehaviour
         instance.rowGenerator.stopGenerator();
         Debug.Log("STOP GAME OVER ");
     }
+    
+
 
     public static void launchRestart()
     {

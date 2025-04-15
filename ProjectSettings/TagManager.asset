@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ENNEMY
   - BOUNDS
+  - BONUS
   layers:
   - Default
   - TransparentFX

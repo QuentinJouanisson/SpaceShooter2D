@@ -84,15 +84,12 @@ public class EnnemyRowGenerator : MonoBehaviour
 
     private void SpawnOneLine()
     {
-        //float totalWidth = GameBG.GetComponent<Renderer>().bounds.size.x;
+        float totalWidth = GameBG.GetComponent<Renderer>().bounds.size.x;
         //float totalHeight = GameBG.GetComponent <Renderer>().bounds.size.y;
-
-        float totalWidth = 1600;
         
-
         int totalCount = (int)(totalWidth / ballSpaceInterval);
         System.Random random = new System.Random();
-        for (int i = 0; i <= totalCount; i++)
+        for (int i = 0; i < totalCount; i++)
         {
             int pickedInt = random.Next(models.Count * 100 / percentSpawn);
             if (pickedInt < models.Count)

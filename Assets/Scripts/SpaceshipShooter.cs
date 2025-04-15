@@ -4,6 +4,16 @@ using System.Collections.Generic;
 
 public class SpaceshipShooter : MonoBehaviour
 {
+    [Header("------Shot Parameters------")]
+    [SerializeField]
+    private float timeToWait;
+
+    [SerializeField]
+    private float startTime;
+
+    [SerializeField]
+    private bool hasFired;
+
     [SerializeField]
     private GameObject projectilePrefab;
 
@@ -28,9 +38,16 @@ public class SpaceshipShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !hasFired)
         {
             ShootProjectile();
+        }
+        if (hasFired)
+        {
+            if(Time.time - startTime >= timeToWait)
+            {
+                hasFired = false;
+            }
         }
 
     }
@@ -53,6 +70,9 @@ public class SpaceshipShooter : MonoBehaviour
         Vector3 force = dir * projectileSpeedMultiplier * Time.fixedDeltaTime;
         shotFired.GetComponent<Rigidbody2D>().AddForce(force);  
         Destroy(shotFired,lifetime);
+
+        startTime = Time.time;
+        hasFired = true;
 
     }
 }

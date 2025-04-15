@@ -12,7 +12,7 @@ public class ProjectileCollisionController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.CompareTag("ENNEMY"))
+        if (collision.gameObject.CompareTag("ENNEMY") || collision.gameObject.CompareTag("BONUS") || collision.gameObject.CompareTag("MALUS"))
         {
             SpaceShooterItems item = collision.gameObject.GetComponent<SpaceShooterItems>();
             int scorewon = item.getScoreBonus();

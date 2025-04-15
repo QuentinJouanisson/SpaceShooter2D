@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class GameOverTrigger : MonoBehaviour
 {
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,8 +14,15 @@ public class GameOverTrigger : MonoBehaviour
     {
 
         if (collision.gameObject.CompareTag("ENNEMY"))
-        { 
-            GameControl.OnGameOver();
+        {
+            PlayerHealthSystem playerHealth = GetComponent<PlayerHealthSystem>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamages(20);
+            }
+
+            //Destroy(gameObject);
+            //GameControl.OnGameOver();
 
         }
     }

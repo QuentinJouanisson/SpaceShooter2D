@@ -50,7 +50,7 @@ public class SpaceshipShooter : MonoBehaviour
         dir = dir.normalized;
 
         //calculate Force
-        Vector3 force = dir * projectileSpeedMultiplier * Time.deltaTime;
+        Vector3 force = dir * projectileSpeedMultiplier * Time.fixedDeltaTime;
         shotFired.GetComponent<Rigidbody2D>().AddForce(force);  
         Destroy(shotFired,lifetime);
 

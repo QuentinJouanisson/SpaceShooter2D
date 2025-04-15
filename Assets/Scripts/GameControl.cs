@@ -17,18 +17,30 @@ public class GameControl : MonoBehaviour
     private GameObject GameOverGO;
 
     [SerializeField]
+    private WallScript Wall;
 
+    [SerializeField]
+    private Vector3 wallStartPos;
+
+    [SerializeField]
     private bool isGameOn;
 
-    //coment
-    public static GameControl instance ;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public static GameControl instance;
+
+    [SerializeField]
+    private EnnemyRowGenerator rowGenerator;
+
+    
+    
     void Start()
     {
         isGameOn = true;
         instance = this;
         GameOverGO.SetActive(false);
         instance.scoreIHM.text = "score : 0 ";
+        wallStartPos = Wall.gameObject.transform.position;
+        Wall.runWall();
+        rowGenerator.toggleGenerator();
     }
 
     public static void incrScore(int score)
@@ -43,7 +55,8 @@ public class GameControl : MonoBehaviour
     {
         instance.isGameOn = false;
         instance.GameOverGO.SetActive(true);
-        //TODO stop the count !
+        instance.Wall.stopWall();
+        instance.rowGenerator.stopGenerator();
         Debug.Log("STOP GAME OVER ");
     }
 
@@ -52,6 +65,11 @@ public class GameControl : MonoBehaviour
         instance.isGameOn = true;
         instance.GameOverGO.SetActive(false);
         instance.scoreTotal = 0;
+        instance.Wall.runWall();
+        instance.Wall.gameObject.transform.position = instance.wallStartPos;
+        instance.rowGenerator.toggleGenerator();
+
+
         Debug.Log("restart");
     }
 

@@ -64,7 +64,19 @@ public class GameControl : MonoBehaviour
         instance.GameOverGO.SetActive(true);
         instance.Wall.stopWall();
         instance.rowGenerator.stopGenerator();
+
         Debug.Log("STOP GAME OVER ");
+        Rigidbody2D rb = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>(); 
+        rb.linearVelocity = Vector2.zero;
+        rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;     //Freeze the player RBD
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;                    //prevent new imputs
+
+        OscillatingEnnemyRow[] allOscillators = GameObject.FindObjectsByType<OscillatingEnnemyRow>(FindObjectsSortMode.None);
+        foreach (OscillatingEnnemyRow osc in allOscillators)
+        {
+            osc.enabled = false;                                                                            //Stops the BigEnnemies oscillations
+        }
+
     }
     
 
@@ -78,8 +90,17 @@ public class GameControl : MonoBehaviour
         instance.Wall.gameObject.transform.position = instance.wallStartPos;
         instance.rowGenerator.toggleGenerator();
 
-
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().ResetPosAndRot();
+        Rigidbody2D rb = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.None;                                                       //Resets the player RBD
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;                     //Resetss the controls
         Debug.Log("restart");
+
+        OscillatingEnnemyRow[] allOscillators = GameObject.FindObjectsByType<OscillatingEnnemyRow>(FindObjectsSortMode.None);
+        foreach (OscillatingEnnemyRow osc in allOscillators)
+        {
+            osc.enabled = true;                                                                             //Resets the BigEnnemies oscillations
+        }
     }
 
     public void OnRestart()

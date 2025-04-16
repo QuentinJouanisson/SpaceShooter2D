@@ -227,10 +227,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_0
       rect:
         serializedVersion: 2
-        x: 18
+        x: 36
         y: 362
-        width: 70
-        height: 73
+        width: 52
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,7 +251,7 @@ TextureImporter:
         serializedVersion: 2
         x: 90
         y: 362
-        width: 122
+        width: 55
         height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -318,7 +318,7 @@ TextureImporter:
         x: 410
         y: 371
         width: 32
-        height: 39
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_5
       rect:
         serializedVersion: 2
-        x: 445
-        y: 302
-        width: 121
-        height: 114
+        x: 447
+        y: 370
+        width: 33
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_12
       rect:
         serializedVersion: 2
-        x: 410
-        y: 312
-        width: 31
-        height: 38
+        x: 411
+        y: 319
+        width: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_14
       rect:
         serializedVersion: 2
-        x: 13
-        y: 198
-        width: 76
-        height: 102
+        x: 37
+        y: 253
+        width: 52
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -558,9 +558,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 90
-        y: 228
-        width: 113
-        height: 73
+        y: 253
+        width: 55
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -647,7 +647,7 @@ TextureImporter:
         serializedVersion: 2
         x: 447
         y: 263
-        width: 52
+        width: 33
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -668,9 +668,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 201
-        y: 172
-        width: 32
-        height: 35
+        y: 195
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,7 +714,7 @@ TextureImporter:
         x: 274
         y: 191
         width: 9
-        height: 45
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,9 +734,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 184
-        width: 10
-        height: 24
+        y: 191
+        width: 9
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,9 +756,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 296
-        y: 192
+        y: 191
         width: 6
-        height: 13
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -800,9 +800,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 432
-        y: 107
-        width: 131
-        height: 110
+        y: 175
+        width: 35
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -866,9 +866,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 297
-        y: 105
-        width: 49
-        height: 71
+        y: 107
+        width: 48
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -887,9 +887,9 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_31
       rect:
         serializedVersion: 2
-        x: 347
+        x: 345
         y: 107
-        width: 46
+        width: 48
         height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -909,10 +909,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_32
       rect:
         serializedVersion: 2
-        x: 401
-        y: 101
-        width: 53
-        height: 56
+        x: 398
+        y: 107
+        width: 44
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -932,9 +932,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 37
-        y: 26
-        width: 43
-        height: 60
+        y: 25
+        width: 47
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -953,10 +953,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_34
       rect:
         serializedVersion: 2
-        x: 90
-        y: 26
-        width: 43
-        height: 60
+        x: 84
+        y: 25
+        width: 49
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -975,10 +975,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_35
       rect:
         serializedVersion: 2
-        x: 136
-        y: 26
-        width: 51
-        height: 60
+        x: 133
+        y: 25
+        width: 57
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,10 +997,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_36
       rect:
         serializedVersion: 2
-        x: 297
-        y: 11
-        width: 80
-        height: 63
+        x: 336
+        y: 25
+        width: 42
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1019,10 +1019,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_37
       rect:
         serializedVersion: 2
-        x: 387
+        x: 379
         y: 25
-        width: 45
-        height: 56
+        width: 53
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1041,10 +1041,10 @@ TextureImporter:
       name: spaceshooterspritesheet_AIBGremoved_38
       rect:
         serializedVersion: 2
-        x: 435
-        y: 17
+        x: 432
+        y: 25
         width: 52
-        height: 64
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1077,6 +1077,116 @@ TextureImporter:
       bones: []
       spriteID: 5613838caaa864c469f336fc917b6282
       internalID: -1121579172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_39
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 175
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edd77ebe032ce2499f8476a5bcdff6e
+      internalID: 1737369424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_40
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 195
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d44308445f8b348a55c736cf9e7bd8
+      internalID: 168506911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_41
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 195
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d23715119df1864bb0adedbfb768c3a
+      internalID: 478664157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_42
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 253
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3230047a5fee648b725d4e99b6880d
+      internalID: 1019759469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceshooterspritesheet_AIBGremoved_43
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 362
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf99234a277282041be0d04b05acbeed
+      internalID: 522964648
       vertices: []
       indices: 
       edges: []
@@ -1128,7 +1238,12 @@ TextureImporter:
       spaceshooterspritesheet_AIBGremoved_36: -456413977
       spaceshooterspritesheet_AIBGremoved_37: -140962091
       spaceshooterspritesheet_AIBGremoved_38: 1601237123
+      spaceshooterspritesheet_AIBGremoved_39: 1737369424
       spaceshooterspritesheet_AIBGremoved_4: 10170432
+      spaceshooterspritesheet_AIBGremoved_40: 168506911
+      spaceshooterspritesheet_AIBGremoved_41: 478664157
+      spaceshooterspritesheet_AIBGremoved_42: 1019759469
+      spaceshooterspritesheet_AIBGremoved_43: 522964648
       spaceshooterspritesheet_AIBGremoved_5: 1663587465
       spaceshooterspritesheet_AIBGremoved_6: -1817991373
       spaceshooterspritesheet_AIBGremoved_7: 1836344184

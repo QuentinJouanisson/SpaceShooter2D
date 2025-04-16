@@ -7,7 +7,7 @@ public class PlayerHealthSystem : MonoBehaviour
 {
 
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth;
 
     public delegate void OnDeath();
     public event OnDeath onDeath;

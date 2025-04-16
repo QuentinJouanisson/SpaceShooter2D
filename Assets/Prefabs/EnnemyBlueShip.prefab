@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1121691421533823100}
   - component: {fileID: 3279759821559707268}
   - component: {fileID: 5755593462105195461}
+  - component: {fileID: 4927193036168931974}
   m_Layer: 0
   m_Name: EnnemyBlueShip
-  m_TagString: ENNEMY
+  m_TagString: LargeEnnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,3 +154,18 @@ MonoBehaviour:
   Sprite: {fileID: 205400041, guid: ae506e93b12d14340ac7f43940f9a7e3, type: 3}
   life: 10
   scoreBonus: 10
+--- !u!114 &4927193036168931974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155418590069058450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606d4ebc923604c47831b6029e4fa7c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.5
+  frequency: 0.25
+  startOffsetY: 0

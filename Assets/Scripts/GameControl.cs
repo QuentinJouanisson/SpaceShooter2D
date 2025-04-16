@@ -36,6 +36,7 @@ public class GameControl : MonoBehaviour
 
     public PlayerHealthSystem mothershipHealth;
 
+    public LargeEnnemySpawner LargeEnnemySpawner;
 
     void Start()
     {
@@ -95,6 +96,8 @@ public class GameControl : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.None;                                                       //Resets the player RBD
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;                     //Resetss the controls
         Debug.Log("restart");
+
+        instance.LargeEnnemySpawner.RespawnEnnemies();                                                      //Respawn all ennemies
 
         OscillatingEnnemyRow[] allOscillators = GameObject.FindObjectsByType<OscillatingEnnemyRow>(FindObjectsSortMode.None);
         foreach (OscillatingEnnemyRow osc in allOscillators)

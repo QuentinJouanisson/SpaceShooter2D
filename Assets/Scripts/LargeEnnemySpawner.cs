@@ -15,10 +15,12 @@ public class LargeEnnemySpawner : MonoBehaviour
 
     public void SpawnEnnemies()
     {
+        Debug.Log("spawning" + spawnPoints.Length + "ennemies.");
         foreach (Transform spawnPoint in spawnPoints)
         {
             GameObject ennemy = Instantiate(ennemyPrefab, spawnPoint.position, Quaternion.identity);
             spawnedEnnemies.Add(ennemy);
+
         }
         
     }

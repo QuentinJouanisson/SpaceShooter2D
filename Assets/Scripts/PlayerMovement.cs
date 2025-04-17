@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Quaternion startRotation;
 
     [SerializeField] private float thrustForce = 1.5f;
-    [SerializeField] private float rotationSpeed = 200f;
+    [SerializeField] private float rotationSpeed = 350f;
     [SerializeField] private KeyCode thrustKey = KeyCode.UpArrow;
     [SerializeField] private KeyCode rotateLeftKey = KeyCode.LeftArrow;
     [SerializeField] private KeyCode rotateRightKey = KeyCode.RightArrow;

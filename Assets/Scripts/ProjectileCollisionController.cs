@@ -21,11 +21,24 @@ public class ProjectileCollisionController : MonoBehaviour
 
             GameControl.incrScore(scorewon);
 
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject); 
+            
         }
         if (collision.gameObject.CompareTag("BOUNDS"))
         {
-            Destroy(gameObject);
+                Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("LargeEnnemy"))
+        {
+            SpaceShooterItems item = collision.gameObject.GetComponent<SpaceShooterItems>();
+            int scorewon = item.getScoreBonus();
+
+            Debug.Log("Collision detected with LARGE ennemy" + scorewon);
+
+            GameControl.incrScore(scorewon);
+
+            //Destroy(collision.gameObject); //old method, more optimized, TODO, make a difference between the base pool of ennemies that can be destroyed and the mini bosses
+            collision.gameObject.SetActive(false);
         }
     }
 }

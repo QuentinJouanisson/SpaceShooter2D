@@ -8,6 +8,8 @@ TagManager:
   - BOUNDS
   - BONUS
   - LargeEnnemy
+  - MALUS
+  - ENNEMYPROJECTILE
   layers:
   - Default
   - TransparentFX

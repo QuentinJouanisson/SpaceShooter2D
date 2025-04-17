@@ -29,6 +29,9 @@ public class SpaceshipShooter : MonoBehaviour
     [SerializeField]
     private float projectileSpeedMultiplier;
 
+    [SerializeField]
+    private KeyCode MainFire = KeyCode.Mouse0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,7 +41,8 @@ public class SpaceshipShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !hasFired)
+        //if (Input.GetButtonDown("Fire1") && !hasFired)
+        if (Input.GetKey(MainFire) && !hasFired)
         {
             ShootProjectile();
         }
@@ -53,26 +57,40 @@ public class SpaceshipShooter : MonoBehaviour
     }
     private void ShootProjectile()
     {
-        Vector3 currentMouseClickWorldSpace = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mouseWorldPos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos.z = 0;
+
+        Vector3 aimDir = (mouseWorldPos - startPos.position).normalized;
+     
+        Debug.Log("ShootDir Magnitude: " + aimDir.magnitude);
+
+        Vector3 forward = transform.up;
+
+        float maxAngle = 15f;
+        float angleBetween = Vector3.Angle(forward, aimDir);
+
+        if(angleBetween > maxAngle)
+        {
+            aimDir = Vector3.RotateTowards(forward, aimDir, Mathf.Deg2Rad * maxAngle, 0f);
+        }
+        
         GameObject shotFired = Instantiate(projectilePrefab, startPos.position, Quaternion.identity);
 
-        //Calculating Projectile Vector
-        var heading = currentMouseClickWorldSpace - startPos.position;
-        var distance = heading.magnitude;
-        var dir = heading / distance;
+        //calculate Force - old method 
+        //Vector3 force = shootDir * projectileSpeedMultiplier * Time.fixedDeltaTime;
+        //shotFired.GetComponent<Rigidbody2D>().AddForce(force);  
+        //Destroy(shotFired,lifetime);
 
-        dir.z = 0;
-        dir.x = (float)System.Math.Round(dir.x,2);
-        dir.y = (float)System.Math.Round(dir.y,2);
-        dir = dir.normalized;
+        Rigidbody2D rb = shotFired.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = aimDir * projectileSpeedMultiplier;
+        Destroy(shotFired, lifetime);
 
-        //calculate Force
-        Vector3 force = dir * projectileSpeedMultiplier * Time.fixedDeltaTime;
-        shotFired.GetComponent<Rigidbody2D>().AddForce(force);  
-        Destroy(shotFired,lifetime);
 
         startTime = Time.time;
         hasFired = true;
+
+        Debug.DrawRay(startPos.position, forward * 2f, Color.green, 1f);
+        Debug.DrawRay(startPos.position, aimDir * 2f, Color.red, 1f);
 
     }
 }

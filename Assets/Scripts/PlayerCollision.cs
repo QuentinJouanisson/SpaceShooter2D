@@ -11,13 +11,20 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("ENNEMY") || collision.CompareTag("ENNEMYPROJECTILE"))
+        if(collision.CompareTag("ENNEMY")|| collision.CompareTag("ENNEMYPROJECTILE"))
         {
             if (health != null)
             {
                 health.TakeDamages(20);
             }
             Destroy(collision.gameObject);
+        }
+        if (collision.CompareTag("LargeEnnemy"))
+        {
+            if (health != null)
+            {
+                health.TakeDamages(50);
+            }
         }
     }
 }

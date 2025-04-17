@@ -36,7 +36,7 @@ public class GameControl : MonoBehaviour
 
     public PlayerHealthSystem mothershipHealth;
 
-    public LargeEnnemySpawner LargeEnnemySpawner;
+    public LargeEnnemySpawner largeEnnemySpawner;
 
     void Start()
     {
@@ -55,7 +55,7 @@ public class GameControl : MonoBehaviour
     {
         instance.scoreTotal += score;
         // mise a jour de l'ihm
-        instance.scoreIHM.text = "score : "+instance.scoreTotal.ToString();
+        instance.scoreIHM.text = "score : " + instance.scoreTotal.ToString();
 
     }
 
@@ -75,7 +75,7 @@ public class GameControl : MonoBehaviour
         OscillatingEnnemyRow[] allOscillators = GameObject.FindObjectsByType<OscillatingEnnemyRow>(FindObjectsSortMode.None);
         foreach (OscillatingEnnemyRow osc in allOscillators)
         {
-            osc.enabled = false;                                                                            //Stops the BigEnnemies oscillations
+            osc.enabled = false;                                                                           //Stops the BigEnnemies oscillations
         }
 
     }
@@ -97,7 +97,7 @@ public class GameControl : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;                     //Resetss the controls
         Debug.Log("restart");
 
-        instance.LargeEnnemySpawner.RespawnEnnemies();                                                      //Respawn all ennemies
+        instance.largeEnnemySpawner.RespawnEnnemies();                                                      //Respawn all ennemies
 
         OscillatingEnnemyRow[] allOscillators = GameObject.FindObjectsByType<OscillatingEnnemyRow>(FindObjectsSortMode.None);
         foreach (OscillatingEnnemyRow osc in allOscillators)

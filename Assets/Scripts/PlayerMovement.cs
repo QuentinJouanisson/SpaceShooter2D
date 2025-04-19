@@ -140,21 +140,3 @@ public class PlayerMovement : MonoBehaviour
 
     }
 }
-
-//float rotationInput = 0f;
-//if (Input.GetKey(rotateLeftKey)) rotationInput = 1f;
-//else if(Input.GetKey(alternativeRotateRightKey)) rotationInput = 1f;
-//if (Input.GetKey(rotateRightKey)) rotationInput = -1f;
-//else if (Input.GetKey(alternativeRotateRightKey)) rotationInput = -1f;
-
-//rb.MoveRotation(rb.rotation +  rotationInput * rotationSpeed * Time.deltaTime);
-
-//if (Input.GetKey(thrustKey))
-//{
-//    Vector2 force = transform.up * thrustForce;
-//    rb.AddForce(force);
-//}
-//else if (Input.GetKey(alternativeThrustKey))
-//{
-//    Vector2 force = transform.up * thrustForce;
-//    rb.AddForce(force);

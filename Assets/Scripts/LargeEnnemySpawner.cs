@@ -5,9 +5,8 @@ public class LargeEnnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject ennemyPrefab;
     [SerializeField] private Transform[] spawnPoints;
-    private readonly List<GameObject> spawnedEnnemies = new();
-    private readonly float SpawnDelay = 2f;
-    private bool IsSpawning = true;
+    private List<GameObject> spawnedEnnemies = new();
+    private readonly float SpawnEffectDuration = 2f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {   
@@ -16,15 +15,54 @@ public class LargeEnnemySpawner : MonoBehaviour
 
     public void SpawnEnnemies()
     {
-        Debug.Log("spawning" + spawnPoints.Length + "ennemies.");
+        StartCoroutine(Spawning());
+    }
+    private IEnumerator SpawnFX(GameObject MiniBoss, int loops)
+    {
+        SpriteRenderer sr = MiniBoss.GetComponent<SpriteRenderer>();
+        if (sr == null) yield break;
+
+        float interval = SpawnEffectDuration / (loops * 2);
+        for (int i = 0; i < loops; i++)
+        {
+            sr.color = new Color(1f, 1f, 1f, 0.3f);
+            yield return new WaitForSeconds(interval);
+            sr.color = new Color(1f, 1f, 1f, 1f);
+            yield return new WaitForSeconds(interval);
+        }
+    }
+    private IEnumerator Spawning()
+    {
+        spawnedEnnemies.Clear();
+        Debug.Log("spanwing" + spawnPoints.Length + "ennemies");
         foreach (Transform spawnPoint in spawnPoints)
         {
-            GameObject ennemy = Instantiate(ennemyPrefab, spawnPoint.position, Quaternion.identity);
-            spawnedEnnemies.Add(ennemy);
+            GameObject MiniBoss = Instantiate(ennemyPrefab, spawnPoint.position, Quaternion.identity);
+            spawnedEnnemies.Add(MiniBoss);
+
+            MiniBoss.GetComponent<Collider2D>().enabled = false;
+            spawnedEnnemies.Add(MiniBoss);
+
+            StartCoroutine(SpawnFX(MiniBoss, 10));
         }
+
+
+            yield return new WaitForSeconds(SpawnEffectDuration);
+
+            foreach(GameObject MiniBoss in spawnedEnnemies)
+            {
+                if(MiniBoss != null)
+                {
+                    SpriteRenderer sr = MiniBoss.GetComponent<SpriteRenderer>();
+                    if (sr != null)
+                        sr.color = new Color(1f, 1f, 1f, 1f);
+                    MiniBoss.GetComponent <Collider2D>().enabled = true; 
+                }
+            }        
     }
     public void DestroyEnnemies()
     {
+
         foreach (GameObject ennemy in spawnedEnnemies)
         {
             if (ennemy != null)
@@ -34,7 +72,8 @@ public class LargeEnnemySpawner : MonoBehaviour
     }
     public void RespawnEnnemies()
     {
+        StopAllCoroutines();
         DestroyEnnemies();
-        SpawnEnnemies();
+        StartCoroutine(Spawning());
     }
 }

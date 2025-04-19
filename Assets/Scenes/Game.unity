@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 53948252}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 7, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -894,7 +894,7 @@ MonoBehaviour:
   GameBG: {fileID: 475574521}
   Wall: {fileID: 1913035947}
   SpawnPoint: {fileID: 1694033004}
-  spawnTime: 5
+  spawnTime: 10
   initialSpawnTime: 10
   spawnIncTime: 1
   percentSpawn: 30
@@ -931,7 +931,7 @@ Transform:
   m_GameObject: {fileID: 337483554}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalPosition: {x: -7, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1813,7 +1813,7 @@ Transform:
   m_GameObject: {fileID: 769241471}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2319,7 +2319,7 @@ Transform:
   m_GameObject: {fileID: 1173255980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -3, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2799,7 +2799,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1396637096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2815,10 +2815,13 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0, z: 0}
   startRotation: {x: 0, y: 0, z: 0, w: 0}
   thrustForce: 0.5
-  rotationSpeed: 400
-  thrustKey: 273
-  rotateLeftKey: 276
-  rotateRightKey: 275
+  rotationSpeed: 750
+  thrustKeys: 110100007a00000008010000
+  antithrustKey: 120100000501000073000000
+  rotateLeftKey: 140100000701000061000000
+  rotateRightKey: 130100006500000009010000
+  translateLeftKey: 0401000071000000
+  translateRightKey: 0601000064000000
   screenHalfWidth: 0
   screenHalfHeight: 0
 --- !u!60 &1396637099

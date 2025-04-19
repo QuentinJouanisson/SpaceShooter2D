@@ -10,9 +10,66 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float thrustForce = 1.5f;
     [SerializeField] private float rotationSpeed = 350f;
-    [SerializeField] private KeyCode thrustKey = KeyCode.UpArrow;
-    [SerializeField] private KeyCode rotateLeftKey = KeyCode.LeftArrow;
-    [SerializeField] private KeyCode rotateRightKey = KeyCode.RightArrow;
+    [SerializeField] private KeyCode[] thrustKeys = { KeyCode.UpArrow, KeyCode.Z, KeyCode.Keypad8 };
+    [SerializeField] private KeyCode[] antithrustKey = { KeyCode.DownArrow, KeyCode.S, KeyCode.Keypad2 };
+    [SerializeField] private KeyCode[] rotateLeftKey = {KeyCode.LeftArrow, KeyCode.A, KeyCode.Keypad9 };
+    [SerializeField] private KeyCode[] rotateRightKey = { KeyCode.RightArrow, KeyCode.E, KeyCode.Keypad7 };
+    [SerializeField] private KeyCode[] translateLeftKey = {KeyCode.Q, KeyCode.Keypad4};
+    [SerializeField] private KeyCode[] translateRightKey = { KeyCode.D, KeyCode.Keypad6};
+
+    private bool IsThrusting()
+    {
+        foreach(KeyCode key in thrustKeys)
+        {
+            if(Input.GetKey(key)) return true;
+        }
+        return false;
+    }
+
+    private bool IsAntiThrusting()
+    {
+        foreach(KeyCode key in antithrustKey)
+        {
+            if (Input.GetKey(key)) return true;
+        }
+        return false;
+    }
+
+    private bool IsRotatingLeft()
+    {
+        foreach(KeyCode key in rotateLeftKey)
+        {
+            if (Input.GetKey(key)) return true;
+        }
+        return false;
+    }
+    private bool IsRotatingRight()
+    {
+        foreach (KeyCode key in rotateRightKey)
+        {
+            if(Input.GetKey(key)) return true;
+        }
+        return false;
+    }
+    private bool IsTranslatingLeft()
+    {
+        foreach(KeyCode key in translateLeftKey)
+        {
+            if(Input.GetKey(key)) return true;
+        }
+        return false;
+    }
+    private bool IsTranslatingRight()
+    {
+        foreach(KeyCode key in translateRightKey)
+        {
+            if(Input.GetKey(key)) return true;
+        }
+        return false;
+    }
+
+
+
 
     private Rigidbody2D rb;
 
@@ -43,17 +100,61 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       float rotationInput = 0f;
+        float thrustdir = 0f;
 
-        float rotationInput = 0f;
-        if (Input.GetKey(rotateLeftKey)) rotationInput = 1f;
-        if (Input.GetKey(rotateRightKey)) rotationInput = -1f;
-
-        rb.MoveRotation(rb.rotation +  rotationInput * rotationSpeed * Time.deltaTime);
-
-        if (Input.GetKey(thrustKey))
+       if (IsRotatingLeft())
         {
-            Vector2 force = transform.up * thrustForce;
+            rotationInput = 1f;
+            rb.MoveRotation(rb.rotation + rotationInput * rotationSpeed * Time.deltaTime);
+        }
+        if (IsRotatingRight())
+        {
+            rotationInput = -1f;
+            rb.MoveRotation(rb.rotation + rotationInput * rotationSpeed * Time.deltaTime);
+        }
+        if (IsThrusting())
+        {
+            thrustdir = 1f;
+            Vector2 force = thrustForce * thrustdir * transform.up;
             rb.AddForce(force);
         }
+        if (IsAntiThrusting())
+        {
+            thrustdir = -1f;
+            Vector2 force = thrustForce * thrustdir * transform.up;
+            rb.AddForce(force);
+        }
+        if (IsTranslatingLeft())
+        {
+            thrustdir = -1f;
+            Vector2 force = thrustForce * thrustdir * transform.right;
+            rb.AddForce(force);
+        }
+        if (IsTranslatingRight())
+        {
+            thrustdir = 1f;
+            Vector2 force = thrustForce * thrustdir * transform.right;
+            rb.AddForce(force);
+        }
+
     }
 }
+
+//float rotationInput = 0f;
+//if (Input.GetKey(rotateLeftKey)) rotationInput = 1f;
+//else if(Input.GetKey(alternativeRotateRightKey)) rotationInput = 1f;
+//if (Input.GetKey(rotateRightKey)) rotationInput = -1f;
+//else if (Input.GetKey(alternativeRotateRightKey)) rotationInput = -1f;
+
+//rb.MoveRotation(rb.rotation +  rotationInput * rotationSpeed * Time.deltaTime);
+
+//if (Input.GetKey(thrustKey))
+//{
+//    Vector2 force = transform.up * thrustForce;
+//    rb.AddForce(force);
+//}
+//else if (Input.GetKey(alternativeThrustKey))
+//{
+//    Vector2 force = transform.up * thrustForce;
+//    rb.AddForce(force);

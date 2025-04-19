@@ -55,26 +55,5 @@ public class PlayerMovement : MonoBehaviour
             Vector2 force = transform.up * thrustForce;
             rb.AddForce(force);
         }
-
-        //if (Input.GetKey(KeyCode.LeftArrow))
-        //{
-        //    MyTransform.Rotate(0, 0, rotationSpeed * Time.fixedDeltaTime);
-        //}
-        //else if (Input.GetKey(KeyCode.RightArrow))
-        //{
-        //    MyTransform.Rotate(0, 0, -rotationSpeed * Time.fixedDeltaTime);
-        //}
-        //if (Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    MyTransform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
-        //}
-        //else if (Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    MyTransform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
-        //}
-        //    Vector3 pos = MyTransform.position;
-        //pos.x = Mathf.Clamp(pos.x, -screenHalfWidth, screenHalfWidth);
-        //pos.y = Mathf.Clamp(pos.y, -screenHalfHeight, screenHalfHeight);
-        //MyTransform.position = pos;
     }
 }

@@ -20,7 +20,7 @@ public class OscillatingEnnemyRow : MonoBehaviour
     {
         time += Time.deltaTime;
         float newY = initialY + Mathf.Sin(time * frequency * 2 * Mathf.PI) * amplitude;
-        Vector3 newPos = new Vector3(transform.position.x, newY, transform.position.z);
+        Vector3 newPos = new(transform.position.x, newY, transform.position.z);
         transform.position = newPos;
     }
 }

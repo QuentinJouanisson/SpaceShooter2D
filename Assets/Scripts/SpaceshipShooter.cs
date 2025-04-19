@@ -31,13 +31,6 @@ public class SpaceshipShooter : MonoBehaviour
 
     [SerializeField]
     private KeyCode MainFire = KeyCode.Mouse0;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -62,7 +55,7 @@ public class SpaceshipShooter : MonoBehaviour
 
         Vector3 aimDir = (mouseWorldPos - startPos.position).normalized;
      
-        Debug.Log("ShootDir Magnitude: " + aimDir.magnitude);
+        //Debug.Log("ShootDir Magnitude: " + aimDir.magnitude);
 
         Vector3 forward = transform.up;
 

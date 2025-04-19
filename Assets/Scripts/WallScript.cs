@@ -11,6 +11,8 @@ public class WallScript : MonoBehaviour
 
     [SerializeField]
     private bool isOn;
+
+    public float CurrentSpeed => speed;
     void Start()
     {
         speed = initialspeed;
@@ -21,26 +23,26 @@ public class WallScript : MonoBehaviour
     {
         if (isOn)
         {
-            transform.Translate(new Vector3(0, -speed, 0) * Time.fixedDeltaTime);
+            transform.Translate(new Vector3(0, -speed, 0) * Time.deltaTime);
         }
     }
 
-    public void stopWall()
+    public void StopWall()
     {
         isOn = false;
 
     }
-    public void runWall()
+    public void RunWall()
     {
         speed = initialspeed;
         isOn = true;
 
     }
-    public void incSpeedWall()
+    public void IncSpeedWall()
     {
         speed += speedInc;
     }
-    public void decreaseSpeedWall()
+    public void DecreaseSpeedWall()
     {
         if ((speed - speedInc) > initialspeed)
             speed -= speedInc;

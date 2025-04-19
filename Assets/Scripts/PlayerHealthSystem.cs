@@ -10,18 +10,21 @@ public class PlayerHealthSystem : MonoBehaviour
     public int currentHealth;
 
     public delegate void OnDeath();
-    public event OnDeath onDeath;
+    public event OnDeath AtDeath;
+
+    public delegate void OnHealthChanged(int newHealth);
+    public event OnHealthChanged ChangeHealth;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHealth = maxHealth;    
+        currentHealth = maxHealth;        
     }
 
     public void TakeDamages(int amount)
     {
-        currentHealth -= amount;
-        Debug.Log($"{gameObject.name} a {currentHealth} HP");
+        currentHealth -= amount; 
+        currentHealth = Mathf.Max(currentHealth, 0);
 
         if (currentHealth <= 0)
         {
@@ -30,11 +33,11 @@ public class PlayerHealthSystem : MonoBehaviour
     }
     void Die()
     {
-        Debug.Log($"{gameObject.name} est détruit !");
-        onDeath?.Invoke();
-        //Destroy(gameObject);
-        //GameControl.OnGameOver();
+        AtDeath?.Invoke();
     }
-
-    // Update is called once per frame
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        ChangeHealth?.Invoke(currentHealth);
+    }
 }

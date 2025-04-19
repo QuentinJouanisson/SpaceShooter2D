@@ -5,8 +5,9 @@ public class LargeEnnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject ennemyPrefab;
     [SerializeField] private Transform[] spawnPoints;
-
-    private List<GameObject> spawnedEnnemies = new List<GameObject>();
+    private readonly List<GameObject> spawnedEnnemies = new();
+    private readonly float SpawnDelay = 2f;
+    private bool IsSpawning = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {   
@@ -20,9 +21,7 @@ public class LargeEnnemySpawner : MonoBehaviour
         {
             GameObject ennemy = Instantiate(ennemyPrefab, spawnPoint.position, Quaternion.identity);
             spawnedEnnemies.Add(ennemy);
-
         }
-        
     }
     public void DestroyEnnemies()
     {
@@ -33,11 +32,9 @@ public class LargeEnnemySpawner : MonoBehaviour
         }
         spawnedEnnemies.Clear();
     }
-
     public void RespawnEnnemies()
     {
         DestroyEnnemies();
         SpawnEnnemies();
-
     }
 }

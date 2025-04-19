@@ -4,25 +4,15 @@ using System.Collections.Generic;
 
 public class ProjectileCollisionController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
+   private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.CompareTag("ENNEMY") || collision.gameObject.CompareTag("BONUS") || collision.gameObject.CompareTag("MALUS"))
         {
             SpaceShooterItems item = collision.gameObject.GetComponent<SpaceShooterItems>();
             int scorewon = item.getScoreBonus();
-
-            Debug.Log("Collision detected with ennemy" + scorewon);
-
-            GameControl.incrScore(scorewon);
-
-            Destroy(collision.gameObject); 
-            
+            GameControl.IncrScore(scorewon);
+            Destroy(collision.gameObject);             
         }
         if (collision.gameObject.CompareTag("BOUNDS"))
         {
@@ -31,13 +21,8 @@ public class ProjectileCollisionController : MonoBehaviour
         if (collision.gameObject.CompareTag("LargeEnnemy"))
         {
             SpaceShooterItems item = collision.gameObject.GetComponent<SpaceShooterItems>();
-            int scorewon = item.getScoreBonus();
-
-            Debug.Log("Collision detected with LARGE ennemy" + scorewon);
-
-            GameControl.incrScore(scorewon);
-
-            //Destroy(collision.gameObject); //old method, more optimized, TODO, make a difference between the base pool of ennemies that can be destroyed and the mini bosses
+            int scorewon = item.getScoreBonus();           
+            GameControl.IncrScore(scorewon);           
             collision.gameObject.SetActive(false);
         }
     }

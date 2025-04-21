@@ -4,15 +4,15 @@ using UnityEngine.UI;
 public class HealthBarUI : MonoBehaviour
 {
     [SerializeField] private PlayerHealthSystem playerHealth;
-    private Slider slider;
+    private Slider PlayerSlider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        slider = GetComponent<Slider>();
+        PlayerSlider = GetComponent<Slider>();
         if(playerHealth == null)
             playerHealth = GetComponent<PlayerHealthSystem>();
-        slider.maxValue = playerHealth.maxHealth;
-        slider.value = playerHealth.currentHealth;
+        PlayerSlider.maxValue = playerHealth.playerMaxHealth;
+        PlayerSlider.value = playerHealth.playerCurrentHealth;
                 
     }
 
@@ -21,7 +21,7 @@ public class HealthBarUI : MonoBehaviour
     {
         if(playerHealth != null)
         {
-            slider.value = playerHealth.currentHealth;
+            PlayerSlider.value = playerHealth.playerCurrentHealth;
         }
     }
 }

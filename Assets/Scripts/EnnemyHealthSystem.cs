@@ -1,9 +1,9 @@
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class EnnemyHealthSystem : MonoBehaviour
 {
-    private int EnnemyCurrentHealth;
+    public int EnnemyMaxHealth;
+    public int EnnemyCurrentHealth;
     private SpaceShooterItems ItemsData;
     [SerializeField] private GameObject EnnemyExplosionEffectPrefab;
     private FlashEffect Flash;
@@ -12,8 +12,9 @@ public class EnnemyHealthSystem : MonoBehaviour
     private void Start()
     {
         ItemsData = GetComponent<SpaceShooterItems>();
-        EnnemyCurrentHealth = ItemsData.getLife();
-        Flash = GetComponent<FlashEffect>(); 
+        EnnemyMaxHealth = ItemsData.getLife();
+        EnnemyCurrentHealth = EnnemyMaxHealth;
+        Flash = GetComponent<FlashEffect>();
     }
 
     public void EnnemyTakeDamage(int ammount)

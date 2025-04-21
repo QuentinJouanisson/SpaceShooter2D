@@ -16,7 +16,7 @@ public class GameControl : MonoBehaviour
     [SerializeField] private GameObject GameOverGO;
     [SerializeField] private WallScript Wall;
     [SerializeField] private Vector3 wallStartPos;
-    [SerializeField] private bool isGameOn;
+    private bool isGameOn;
     public static bool IsGameOn => instance.isGameOn;
     public static GameControl instance;
 
@@ -72,8 +72,8 @@ public class GameControl : MonoBehaviour
     }
     private void Update()
     {        
-            playerShipHPText.text = playerHealth.currentHealth + "/" + playerHealth.maxHealth;
-            motherShipHPText.text = mothershipHealth.currentHealth + "/" + mothershipHealth.maxHealth;
+            playerShipHPText.text = playerHealth.playerCurrentHealth + "/" + playerHealth.playerMaxHealth;
+            motherShipHPText.text = mothershipHealth.playerCurrentHealth + "/" + mothershipHealth.playerMaxHealth;
     }
 
     public static void OnGameOver()
@@ -95,6 +95,9 @@ public class GameControl : MonoBehaviour
             osc.enabled = false;                                                                           //Stops the BigEnnemies oscillations
         }
 
+        //stop particle VFX
+        //Stop animated Sprites
+
     }
     
 
@@ -114,7 +117,7 @@ public class GameControl : MonoBehaviour
 
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().ResetPosAndRot();
         Rigidbody2D rb = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.None;                                                       //Resets the player RBD
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;                                                       //Resets the player RBD
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;                     //Resetss the controls
 
         instance.largeEnnemySpawner.RespawnEnnemies();                                                      //Respawn all ennemies

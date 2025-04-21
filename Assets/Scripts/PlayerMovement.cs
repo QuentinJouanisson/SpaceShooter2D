@@ -10,67 +10,56 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float thrustForce = 1.5f;
     [SerializeField] private float rotationSpeed = 350f;
+    [SerializeField] private float thrustForward = 1f;
+    [SerializeField] private float thrustAux = 0.5f;
     [SerializeField] private KeyCode[] thrustKeys = { KeyCode.UpArrow, KeyCode.Z, KeyCode.Keypad8 };
-    [SerializeField] private KeyCode[] antithrustKey = { KeyCode.DownArrow, KeyCode.S, KeyCode.Keypad2 };
-    [SerializeField] private KeyCode[] rotateLeftKey = {KeyCode.LeftArrow, KeyCode.A, KeyCode.Keypad9 };
-    [SerializeField] private KeyCode[] rotateRightKey = { KeyCode.RightArrow, KeyCode.E, KeyCode.Keypad7 };
-    [SerializeField] private KeyCode[] translateLeftKey = {KeyCode.Q, KeyCode.Keypad4};
-    [SerializeField] private KeyCode[] translateRightKey = { KeyCode.D, KeyCode.Keypad6};
+    [SerializeField] private KeyCode[] antithrustKeys = { KeyCode.DownArrow, KeyCode.S, KeyCode.Keypad2 };
+    [SerializeField] private KeyCode[] rotateLeftKeys = {KeyCode.LeftArrow, KeyCode.A, KeyCode.Keypad7 };
+    [SerializeField] private KeyCode[] rotateRightKeys = { KeyCode.RightArrow, KeyCode.E, KeyCode.Keypad9 };
+    [SerializeField] private KeyCode[] translateLeftKeys = {KeyCode.Q, KeyCode.Keypad4};
+    [SerializeField] private KeyCode[] translateRightKeys = { KeyCode.D, KeyCode.Keypad6};
 
-    private bool IsThrusting()
+    [SerializeField] private ParticleSystem thrustEffect;
+    [SerializeField] private ParticleSystem antiThrustEffect;
+    [SerializeField] private ParticleSystem translateLeftEffect;
+    [SerializeField] private ParticleSystem translateRightEffect;
+
+    private void TriggerMovementEffects(KeyCode[] keys, ParticleSystem effect)
     {
-        foreach(KeyCode key in thrustKeys)
+        if (IsMoveKeyPressed(keys))
+        {
+            if (!effect.isPlaying) effect.Play();
+        }
+        else
+        {
+            if (effect.isPlaying) effect.Stop();
+        }
+    }
+
+
+    private bool IsMoveKeyPressed(KeyCode[] keys)
+    {
+        foreach (KeyCode key in keys)
         {
             if(Input.GetKey(key)) return true;
         }
         return false;
     }
+    private bool IsThrusting() => IsMoveKeyPressed(thrustKeys);
+    private bool IsAntiThrusting() => IsMoveKeyPressed(antithrustKeys);
+    private bool IsRotatingLeft() => IsMoveKeyPressed(rotateLeftKeys);
+    private bool IsRotatingRight() => IsMoveKeyPressed(rotateRightKeys);
+    private bool IsTranslatingLeft() => IsMoveKeyPressed(translateLeftKeys);
+    private bool IsTranslatingRight() => IsMoveKeyPressed(translateRightKeys);
 
-    private bool IsAntiThrusting()
+    private void ApplyThrust(KeyCode[] keys, Vector2 direction)
     {
-        foreach(KeyCode key in antithrustKey)
+        if (IsMoveKeyPressed(keys))
         {
-            if (Input.GetKey(key)) return true;
+            Vector2 force = thrustForce * direction;
+            rb.AddForce(force);
         }
-        return false;
     }
-
-    private bool IsRotatingLeft()
-    {
-        foreach(KeyCode key in rotateLeftKey)
-        {
-            if (Input.GetKey(key)) return true;
-        }
-        return false;
-    }
-    private bool IsRotatingRight()
-    {
-        foreach (KeyCode key in rotateRightKey)
-        {
-            if(Input.GetKey(key)) return true;
-        }
-        return false;
-    }
-    private bool IsTranslatingLeft()
-    {
-        foreach(KeyCode key in translateLeftKey)
-        {
-            if(Input.GetKey(key)) return true;
-        }
-        return false;
-    }
-    private bool IsTranslatingRight()
-    {
-        foreach(KeyCode key in translateRightKey)
-        {
-            if(Input.GetKey(key)) return true;
-        }
-        return false;
-    }
-
-
-
-
     private Rigidbody2D rb;
 
     [SerializeField] private float screenHalfWidth;
@@ -84,59 +73,42 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
     }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //Start
     void Start()
     {
         startPosition = transform.position;
         startRotation = transform.rotation;
         rb = GetComponent<Rigidbody2D>();
-        float halfHeight = Camera.main.orthographicSize;
-        float halfWidth = halfHeight * Camera.main.aspect;
-        screenHalfWidth = halfWidth -0.5f;
-        screenHalfHeight = halfHeight - 0.5f;
     }
 
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate 
+    void FixedUpdate()
     {
-       float rotationInput = 0f;
-        float thrustdir = 0f;
+        float rotationInput = 0f;
 
-       if (IsRotatingLeft())
+        if (IsRotatingLeft())
         {
             rotationInput = 1f;
-            rb.MoveRotation(rb.rotation + rotationInput * rotationSpeed * Time.deltaTime);
+            rb.MoveRotation(rb.rotation + rotationInput * rotationSpeed * Time.fixedDeltaTime);
         }
         if (IsRotatingRight())
         {
             rotationInput = -1f;
-            rb.MoveRotation(rb.rotation + rotationInput * rotationSpeed * Time.deltaTime);
-        }
-        if (IsThrusting())
-        {
-            thrustdir = 1f;
-            Vector2 force = thrustForce * thrustdir * transform.up;
-            rb.AddForce(force);
-        }
-        if (IsAntiThrusting())
-        {
-            thrustdir = -1f;
-            Vector2 force = thrustForce * thrustdir * transform.up;
-            rb.AddForce(force);
-        }
-        if (IsTranslatingLeft())
-        {
-            thrustdir = -1f;
-            Vector2 force = thrustForce * thrustdir * transform.right;
-            rb.AddForce(force);
-        }
-        if (IsTranslatingRight())
-        {
-            thrustdir = 1f;
-            Vector2 force = thrustForce * thrustdir * transform.right;
-            rb.AddForce(force);
+            rb.MoveRotation(rb.rotation + rotationInput * rotationSpeed * Time.fixedDeltaTime);
         }
 
+        ApplyThrust(thrustKeys, thrustForward * transform.up);
+        ApplyThrust(antithrustKeys, thrustAux* -transform.up);
+        ApplyThrust(translateLeftKeys, thrustAux * -transform.right);
+        ApplyThrust(translateRightKeys, thrustAux * transform.right);
+    }
+    // Update 
+    void Update()
+    {
+        TriggerMovementEffects(thrustKeys, thrustEffect);
+        TriggerMovementEffects(antithrustKeys, antiThrustEffect);
+
+        TriggerMovementEffects(translateLeftKeys, translateLeftEffect);
+        TriggerMovementEffects(translateRightKeys, translateRightEffect);
     }
 }

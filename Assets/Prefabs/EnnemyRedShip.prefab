@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1121691421533823100}
   - component: {fileID: 3279759821559707268}
   - component: {fileID: 5755593462105195461}
+  - component: {fileID: 35882330506914687}
+  - component: {fileID: 3962632444505832870}
   m_Layer: 0
   m_Name: EnnemyRedShip
   m_TagString: ENNEMY
@@ -127,7 +129,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7, y: 0.73}
+    oldSize: {x: 0.52, y: 0.53}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -148,8 +150,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 0
-  itemRarity: 0
+  itemRarity: 1
   itemTag: 1
   Sprite: {fileID: 205400041, guid: ae506e93b12d14340ac7f43940f9a7e3, type: 3}
-  life: 1
-  scoreBonus: 10
+  life: 3
+  scoreBonus: 20
+--- !u!114 &35882330506914687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155418590069058450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1540d5c39fad2074394fe33a7dd8175e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnnemyExplosionEffectPrefab: {fileID: 2258665328218272951, guid: 641bbf7b900d83b4b815bf943f1c69b0, type: 3}
+--- !u!114 &3962632444505832870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155418590069058450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1388086ef9813ca459c6c45b64c89968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1121691421533823100}
+  defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  FlashDamageMaterial: {fileID: 2100000, guid: 04cc45586f9233941b5f2dd1cb6a4aec, type: 2}
+  flashDuration: 0.1

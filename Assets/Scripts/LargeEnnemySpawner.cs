@@ -17,6 +17,13 @@ public class LargeEnnemySpawner : MonoBehaviour
     {
         StartCoroutine(Spawning());
     }
+    public void UnregisterEnnemy(GameObject MiniBoss)
+    {
+        if (spawnedEnnemies.Contains(MiniBoss))
+        {
+            spawnedEnnemies.Remove(MiniBoss);
+        }
+    }
     private IEnumerator SpawnFX(GameObject MiniBoss, int loops)
     {
         SpriteRenderer sr = MiniBoss.GetComponent<SpriteRenderer>();
@@ -39,10 +46,7 @@ public class LargeEnnemySpawner : MonoBehaviour
         {
             GameObject MiniBoss = Instantiate(ennemyPrefab, spawnPoint.position, Quaternion.identity);
             spawnedEnnemies.Add(MiniBoss);
-
             MiniBoss.GetComponent<Collider2D>().enabled = false;
-            spawnedEnnemies.Add(MiniBoss);
-
             StartCoroutine(SpawnFX(MiniBoss, 10));
         }
 

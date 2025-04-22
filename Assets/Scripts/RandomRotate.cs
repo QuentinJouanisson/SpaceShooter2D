@@ -19,6 +19,6 @@ public class RandomRotate : MonoBehaviour
     {
 
         transform.Rotate(0, 0, randomZ);
-        Debug.Log("speedvalue is "+ randomZ);
+        //Debug.Log("speedvalue is "+ randomZ);
     }
 }

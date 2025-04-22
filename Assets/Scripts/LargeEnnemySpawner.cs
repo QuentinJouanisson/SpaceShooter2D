@@ -26,8 +26,7 @@ public class LargeEnnemySpawner : MonoBehaviour
     }
     private IEnumerator SpawnFX(GameObject MiniBoss, int loops)
     {
-        SpriteRenderer sr = MiniBoss.GetComponent<SpriteRenderer>();
-        if (sr == null) yield break;
+        if (!MiniBoss.TryGetComponent<SpriteRenderer>(out var sr)) yield break;
 
         float interval = SpawnEffectDuration / (loops * 2);
         for (int i = 0; i < loops; i++)

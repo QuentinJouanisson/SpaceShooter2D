@@ -34,7 +34,7 @@ public class EnnemyHealthSystem : MonoBehaviour
         if(EnnemyExplosionEffectPrefab != null)
         {
             GameObject fx = Instantiate(EnnemyExplosionEffectPrefab, transform.position, Quaternion.identity);
-            Destroy(fx,1f);
+            Destroy(fx,0.5f);
         }
         int EnnemyScore = ItemsData.getScoreBonus();
         GameControl.IncrScore(EnnemyScore);

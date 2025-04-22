@@ -15,6 +15,7 @@ public class EnnemyRowGenerator : MonoBehaviour
     public float minSpawnTime = 0.7f;
     public List<GameObject> models;
     public float ballSpaceInterval = 37f * 0.015f;
+    public int percentInc = 5;
 
     [SerializeField] private bool isOn;
     [SerializeField] private List<GameObject> instanciedBricks;
@@ -87,7 +88,7 @@ public class EnnemyRowGenerator : MonoBehaviour
     }
     public void IncSpeedGeneration()
     {
-        if((spawnTime-spawnIncTime) >= minSpawnTime)
+        if((spawnTime - spawnIncTime) >= minSpawnTime)
         {
             spawnTime -= spawnIncTime;
         }
@@ -95,5 +96,13 @@ public class EnnemyRowGenerator : MonoBehaviour
     public void DecreaseSpeedGeneration()
     {
         spawnTime += spawnIncTime;
-    }    
+    }
+    public void IncPercentage()
+    {
+        percentSpawn += percentInc;
+        if (percentSpawn > 100)
+        {
+            percentSpawn = 100;
+        }
+    }
 }

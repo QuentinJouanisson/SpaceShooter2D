@@ -1025,6 +1025,7 @@ MonoBehaviour:
   shooterScript: {fileID: 524496833}
   WallSpeedScoreStep: 1000
   MiniBossesSpawnScoreStep: 5000
+  PercentScoreStep: 5000
 --- !u!114 &335525409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,13 +1044,14 @@ MonoBehaviour:
   spawnTime: 10
   initialSpawnTime: 10
   spawnIncTime: 1
-  percentSpawn: 60
+  percentSpawn: 10
   minSpawnTime: 1
   models:
   - {fileID: 7155418590069058450, guid: 6d6ddcf1f0224c34bbc03d81a8524f07, type: 3}
   - {fileID: 7155418590069058450, guid: 3da935a6738ad614e852d21ef15f7166, type: 3}
   - {fileID: 1414903496888872006, guid: 0f8c40a51b73c294ba8a0a59e6ca7e08, type: 3}
   ballSpaceInterval: 0.75
+  percentInc: 5
   isOn: 0
   instanciedBricks: []
 --- !u!1 &337483554
@@ -3161,6 +3163,7 @@ MonoBehaviour:
   - {fileID: 769241472}
   - {fileID: 53948253}
   - {fileID: 1173255981}
+  spawnedEnnemies: []
 --- !u!1 &2099207520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,8 +3322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5324256, y: 0.108691245}
   m_AnchorMax: {x: 0.7845745, y: 0.9101544}
-  m_AnchoredPosition: {x: -3, y: -1}
-  m_SizeDelta: {x: -29.200012, y: -42}
+  m_AnchoredPosition: {x: -78.869995, y: -0.00005340576}
+  m_SizeDelta: {x: -157.74, y: -0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &441121062691406362
 RectTransform:
@@ -3414,7 +3417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.47058824, g: 0.75, b: 0.3235294, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3568,8 +3571,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.28300002, y: 0.108691245}
   m_AnchorMax: {x: 0.521, y: 0.9101544}
-  m_AnchoredPosition: {x: -53.5, y: -1}
-  m_SizeDelta: {x: -129.00009, y: -42}
+  m_AnchoredPosition: {x: -76.27, y: 0.00006866455}
+  m_SizeDelta: {x: -174.54, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2640955571530810025
 CanvasRenderer:
@@ -4099,10 +4102,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2460818968307282146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.69997, y: -33}
-  m_SizeDelta: {x: 200, y: 20}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 0.22900002, y: 0.75}
+  m_AnchoredPosition: {x: 5, y: 10.962}
+  m_SizeDelta: {x: 50, y: -22}
   m_Pivot: {x: 0, y: 0}
 --- !u!1001 &5774486972233987932
 PrefabInstance:
@@ -4503,10 +4506,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 276807247353291474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.599976, y: -33}
-  m_SizeDelta: {x: 200, y: 20}
+  m_AnchorMin: {x: 0, y: 0.2738002}
+  m_AnchorMax: {x: 0.14516601, y: 0.75}
+  m_AnchoredPosition: {x: 18.5, y: 12.186}
+  m_SizeDelta: {x: 87.11, y: -24.372}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &8603546604503298636
 GameObject:

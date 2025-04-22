@@ -53,12 +53,13 @@ public class GameControl : MonoBehaviour
             //Debug.Log("instance speedscore step is " + instance.WallSpeedScoreStep);
             Debug.Log("Wall speed is"+ GameControl.instance.Wall.CurrentSpeed);
         }
-        if(instance.scoreTotal >= instance.lastMiniBossScoreStep + instance.MiniBossesSpawnScoreStep) //&& instance.largeEnnemySpawner. == null)     //a complementariser pour l'ajout conditionnel de mini bosses   
-        {
+        if (instance.scoreTotal >= instance.lastMiniBossScoreStep + instance.MiniBossesSpawnScoreStep && instance.largeEnnemySpawner.spawnedEnnemies != null)     //a complementariser pour l'ajout conditionnel de mini bosses   
+        {           
             instance.lastMiniBossScoreStep += instance.MiniBossesSpawnScoreStep;
+            instance.largeEnnemySpawner.DestroyEnnemies();
             instance.largeEnnemySpawner.SpawnEnnemies();
             //Debug.Log("lastBossScoreStep is " + instance.MiniBossesSpawnScoreStep);
-        }
+        }        
         if (instance.scoreTotal >= instance.lastPercentScoreStep + instance.PercentScoreStep)
         {
             instance.lastPercentScoreStep += instance.PercentScoreStep;
@@ -100,14 +101,15 @@ public class GameControl : MonoBehaviour
         instance.GameOverGO.SetActive(false);
         instance.playerHealth.ResetHealth();
         instance.mothershipHealth.ResetHealth();
-        instance.Wall.RunWall();
+        instance.Wall.RunWall();                                                                            // on reset la speed automatiquement 
         instance.Wall.gameObject.transform.position = instance.wallStartPos;
+        instance.rowGenerator.percentSpawn = 10;
         instance.rowGenerator.ToggleGenerator();
         instance.shooterScript.enabled = true;
 
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().ResetPosAndRot();
         Rigidbody2D rb = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;                                                       //Resets the player RBD
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;                                             //Resets the player RBD
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;                     //Resetss the controls
         instance.largeEnnemySpawner.RespawnEnnemies();                                                      //Respawn all ennemies
         OscillatingEnnemyRow[] allOscillators = GameObject.FindObjectsByType<OscillatingEnnemyRow>(FindObjectsSortMode.None);

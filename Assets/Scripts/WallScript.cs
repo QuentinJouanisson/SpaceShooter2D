@@ -12,7 +12,7 @@ public class WallScript : MonoBehaviour
     [SerializeField]
     private bool isOn;
 
-    public float CurrentSpeed => speed;
+    public float CurrentSpeed => speed; // expression lambda qui reviens a exposer en readonly une public (au lieu de faire un return)
     void Start()
     {
         speed = initialspeed;

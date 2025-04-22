@@ -6,8 +6,6 @@ public class FlashEffect : MonoBehaviour
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material FlashDamageMaterial;
     private readonly float flashDuration = 0.1f;
-
-
     private void Awake()
     {
         if(spriteRenderer == null)

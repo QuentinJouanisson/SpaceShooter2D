@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 public class WallScript : MonoBehaviour
 {
-    public float initialspeed = 0.1f;
-    public float speedInc = 0.01f;
+    public float initialspeed = 0.3f;
+    public float speedInc = 0.02f;
 
     [SerializeField]
     private float speed;
 
     [SerializeField]
     private bool isOn;
+
+    public float CurrentSpeed => speed;
     void Start()
     {
         speed = initialspeed;
@@ -21,26 +23,26 @@ public class WallScript : MonoBehaviour
     {
         if (isOn)
         {
-            transform.Translate(new Vector3(0, -speed, 0) * Time.fixedDeltaTime);
+            transform.Translate(new Vector3(0, -speed, 0) * Time.deltaTime);
         }
     }
 
-    public void stopWall()
+    public void StopWall()
     {
         isOn = false;
 
     }
-    public void runWall()
+    public void RunWall()
     {
         speed = initialspeed;
         isOn = true;
 
     }
-    public void incSpeedWall()
+    public void IncSpeedWall()
     {
         speed += speedInc;
     }
-    public void decreaseSpeedWall()
+    public void DecreaseSpeedWall()
     {
         if ((speed - speedInc) > initialspeed)
             speed -= speedInc;

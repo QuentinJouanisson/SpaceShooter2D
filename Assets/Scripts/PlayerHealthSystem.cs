@@ -6,35 +6,45 @@ using System.Collections.Generic;
 public class PlayerHealthSystem : MonoBehaviour
 {
 
-    public int maxHealth = 100;
-    private int currentHealth;
+    public int playerMaxHealth = 100;
+    public int playerCurrentHealth;
 
     public delegate void OnDeath();
-    public event OnDeath onDeath;
+    public event OnDeath AtDeath;
+
+    public delegate void OnHealthChanged(int newHealth);
+    public event OnHealthChanged ChangeHealth;
+
+    private FlashEffect Flash;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHealth = maxHealth;    
+        playerCurrentHealth = playerMaxHealth;
+        Flash = GetComponent<FlashEffect>();
     }
 
     public void TakeDamages(int amount)
     {
-        currentHealth -= amount;
-        Debug.Log($"{gameObject.name} a {currentHealth} HP");
+        if (Flash != null)
+        {
+            Flash.TriggerFlashDamage();
+        }
+        playerCurrentHealth -= amount; 
+        playerCurrentHealth = Mathf.Max(playerCurrentHealth, 0);
 
-        if (currentHealth <= 0)
+        if (playerCurrentHealth <= 0)
         {
             Die();
         }
     }
     void Die()
     {
-        Debug.Log($"{gameObject.name} est détruit !");
-        onDeath?.Invoke();
-        //Destroy(gameObject);
-        //GameControl.OnGameOver();
+        AtDeath?.Invoke();
     }
-
-    // Update is called once per frame
+    public void ResetHealth()
+    {
+        playerCurrentHealth = playerMaxHealth;
+        ChangeHealth?.Invoke(playerCurrentHealth);
+    }
 }

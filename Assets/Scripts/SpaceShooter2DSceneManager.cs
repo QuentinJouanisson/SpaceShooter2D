@@ -16,5 +16,8 @@ public class SpaceShooter2DSceneManager : MonoBehaviour
 
     }
 
-
+    public void Quit()
+    {
+        Application.Quit();
+    } 
 }

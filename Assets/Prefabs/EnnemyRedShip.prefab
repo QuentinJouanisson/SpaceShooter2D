@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2946946861261133054}
   - component: {fileID: 1121691421533823100}
-  - component: {fileID: 3279759821559707268}
+  - component: {fileID: 8628864206271160738}
   - component: {fileID: 5755593462105195461}
   - component: {fileID: 35882330506914687}
   - component: {fileID: 3962632444505832870}
@@ -91,8 +91,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3279759821559707268
-BoxCollider2D:
+--- !u!60 &8628864206271160738
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,7 +125,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.09, y: -0.12}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -135,8 +135,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.52, y: 0.49}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.028622441, y: 0.1584208}
+      - {x: -0.09238901, y: 0.15617974}
+      - {x: -0.2233015, y: -0.050494634}
+      - {x: 0.004751742, y: -0.21364677}
+      - {x: 0.23082337, y: -0.016065568}
+  m_UseDelaunayMesh: 0
 --- !u!114 &5755593462105195461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1540d5c39fad2074394fe33a7dd8175e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnnemyMaxHealth: 0
+  EnnemyCurrentHealth: 0
   EnnemyExplosionEffectPrefab: {fileID: 2258665328218272951, guid: 641bbf7b900d83b4b815bf943f1c69b0, type: 3}
 --- !u!114 &3962632444505832870
 MonoBehaviour:
@@ -183,4 +191,3 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1121691421533823100}
   defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   FlashDamageMaterial: {fileID: 2100000, guid: 04cc45586f9233941b5f2dd1cb6a4aec, type: 2}
-  flashDuration: 0.1

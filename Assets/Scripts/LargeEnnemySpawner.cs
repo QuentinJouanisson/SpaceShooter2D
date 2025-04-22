@@ -5,7 +5,7 @@ public class LargeEnnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject ennemyPrefab;
     [SerializeField] private Transform[] spawnPoints;
-    private List<GameObject> spawnedEnnemies = new();
+    public List<GameObject> spawnedEnnemies = new();
     private readonly float SpawnEffectDuration = 2f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

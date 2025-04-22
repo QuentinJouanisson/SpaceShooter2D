@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5755593462105195461}
   - component: {fileID: 7935835988933967918}
   - component: {fileID: -1622469445455115992}
+  - component: {fileID: -8318361229799009838}
   m_Layer: 0
   m_Name: EnnemyMeteor
   m_TagString: ENNEMY
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7155418590069058450}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.16874, y: 2.16874, z: 2.16874}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157,6 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1540d5c39fad2074394fe33a7dd8175e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnnemyMaxHealth: 0
+  EnnemyCurrentHealth: 0
   EnnemyExplosionEffectPrefab: {fileID: 2258665328218272951, guid: 641bbf7b900d83b4b815bf943f1c69b0, type: 3}
 --- !u!114 &-1622469445455115992
 MonoBehaviour:
@@ -173,3 +176,18 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1121691421533823100}
   defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   FlashDamageMaterial: {fileID: 2100000, guid: 04cc45586f9233941b5f2dd1cb6a4aec, type: 2}
+--- !u!114 &-8318361229799009838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155418590069058450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22b5dc2c8e3f96408af77c0f961c2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseRotationSpeed: 2
+  maxSpeed: 4
+  minSpeed: -4

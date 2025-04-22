@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2353185817151418825}
   - component: {fileID: 8730121233570564525}
   - component: {fileID: 2038121228805010508}
-  - component: {fileID: 5260394963474913589}
   - component: {fileID: 626201653104308040}
+  - component: {fileID: 5748696053703319036}
   m_Layer: 0
   m_Name: PlayerProjectile
   m_TagString: Untagged
@@ -117,8 +117,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &5260394963474913589
-CapsuleCollider2D:
+--- !u!114 &626201653104308040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555643683837813683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259d4937098e32c4d916a47b6b46eeb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &5748696053703319036
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -151,18 +163,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.12}
-  m_Size: {x: 0.34, y: 0.12}
-  m_Direction: 1
---- !u!114 &626201653104308040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6555643683837813683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 259d4937098e32c4d916a47b6b46eeb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.05

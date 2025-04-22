@@ -16,6 +16,11 @@ public class PlayerCollision : MonoBehaviour
         health = GetComponent<PlayerHealthSystem>();
     }
 
+    private void ContactDamageModifier()
+    {
+
+    }
+
 
     private void Update()
     {

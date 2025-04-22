@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
+//using Unity.VisualScripting;
 
 
 public class GameControl : MonoBehaviour
@@ -61,11 +61,12 @@ public class GameControl : MonoBehaviour
             Debug.Log("Wall speed is"+ GameControl.instance.Wall.CurrentSpeed);
 
         }
-        if(instance.scoreTotal >= instance.lastMiniBossScoreStep + instance.MiniBossesSpawnScoreStep)
+        if(instance.scoreTotal >= instance.lastMiniBossScoreStep + instance.MiniBossesSpawnScoreStep)          
         {
             instance.lastMiniBossScoreStep += instance.MiniBossesSpawnScoreStep;
             //respawn large ennemies
             instance.largeEnnemySpawner.SpawnEnnemies();
+            instance.Wall.StopWall(); 
         }
 
 

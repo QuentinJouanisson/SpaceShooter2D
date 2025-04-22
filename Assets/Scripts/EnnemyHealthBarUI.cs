@@ -17,13 +17,23 @@ public class EnnemyHealthBarUI : MonoBehaviour
         if (ennemyHealth == null)
             ennemyHealth = GetComponent<EnnemyHealthSystem>();
 
-        GameObject healthBarInstance = Instantiate(healthBarPrefab, transform.position + offset, Quaternion.identity, transform);
+        if (EnnemyHPSlider == null)
+            EnnemyHPSlider = GetComponentInChildren<Slider>();
 
-        EnnemyHPSlider = healthBarInstance.GetComponentInChildren<Slider>();
-        EnnemyHPSlider.maxValue = ennemyHealth.EnnemyMaxHealth;
-        EnnemyHPSlider.value = ennemyHealth.EnnemyCurrentHealth;
+        if (EnnemyHPSlider != null && ennemyHealth != null)
+        {
+            EnnemyHPSlider.maxValue = ennemyHealth.EnnemyMaxHealth;
+            EnnemyHPSlider.value = ennemyHealth.EnnemyCurrentHealth;
+            healthbarTransform = EnnemyHPSlider.transform.parent;
+        }
 
-        healthbarTransform = healthBarInstance.transform;
+        //GameObject healthBarInstance = Instantiate(healthBarPrefab, transform.position + offset, Quaternion.identity, transform);         //instanciate dans le cas ou on a vraiment bcp trop d'ennemy a gerer ou des ennemy class procéduraux
+
+        //EnnemyHPSlider = healthBarInstance.GetComponentInChildren<Slider>();
+        //EnnemyHPSlider.maxValue = ennemyHealth.EnnemyMaxHealth;
+        //EnnemyHPSlider.value = ennemyHealth.EnnemyCurrentHealth;
+
+        //healthbarTransform = healthBarInstance.transform;
     }
 
     // Update is called once per frame
@@ -32,7 +42,11 @@ public class EnnemyHealthBarUI : MonoBehaviour
         if(EnnemyHPSlider != null && ennemyHealth != null)
         {
             EnnemyHPSlider.value = ennemyHealth.EnnemyCurrentHealth;
-            healthbarTransform.position = transform.position + offset;
+            if(healthbarTransform != null)
+            {
+                healthbarTransform.position = transform.position + offset;
+            }
+            
         }
         
     }

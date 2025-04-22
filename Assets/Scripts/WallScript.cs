@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 public class WallScript : MonoBehaviour
 {
-    public float initialspeed = 0.2f;
-    public float speedInc = 0.01f;
+    public float initialspeed = 0.3f;
+    public float speedInc = 0.02f;
 
     [SerializeField]
     private float speed;

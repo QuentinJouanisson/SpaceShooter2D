@@ -43,12 +43,8 @@ public class PlayerMovement : MonoBehaviour
         }
         return false;
     }
-    //private bool IsThrusting() => IsMoveKeyPressed(thrustKeys);
-    //private bool IsAntiThrusting() => IsMoveKeyPressed(antithrustKeys);
     private bool IsRotatingLeft() => IsMoveKeyPressed(rotateLeftKeys);
     private bool IsRotatingRight() => IsMoveKeyPressed(rotateRightKeys);
-    //private bool IsTranslatingLeft() => IsMoveKeyPressed(translateLeftKeys);
-    //private bool IsTranslatingRight() => IsMoveKeyPressed(translateRightKeys);
     private void ApplyThrust(KeyCode[] keys, Vector2 direction)
     {
         if (IsMoveKeyPressed(keys))

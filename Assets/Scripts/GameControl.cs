@@ -69,8 +69,8 @@ public class GameControl : MonoBehaviour
     }
     private void Update()
     {        
-            playerShipHPText.text = playerHealth.playerCurrentHealth + "/" + playerHealth.playerMaxHealth;
-            motherShipHPText.text = mothershipHealth.playerCurrentHealth + "/" + mothershipHealth.playerMaxHealth;
+            playerShipHPText.text = "player hp : " + playerHealth.playerCurrentHealth + "/" + playerHealth.playerMaxHealth;
+            motherShipHPText.text = "mothership hp : " + mothershipHealth.playerCurrentHealth + "/" + mothershipHealth.playerMaxHealth;
     }
     public static void OnGameOver()
     {
